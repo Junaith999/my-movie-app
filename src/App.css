@@ -1,0 +1,112 @@
+/* General App Styling */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Search Bar */
+input {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Movie Grid on Home Page */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Movie Card */
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; 
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-card h3 {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Make links look good */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.8; 
+}
+
+/* Movie Detail Page */
+.movie-detail {
+  display: flex;
+  flex-direction: column; /* Stack on small screens */
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* On bigger screens, put image and text side-by-side */
+@media (min-width: 768px) {
+  .movie-detail {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.movie-detail img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-detail h1 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.movie-detail p {
+  line-height: 1.6;
+}
+
+/* Fix for summary <p> tags */
+.movie-detail div div p {
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+/* Back link */
+.movie-detail a {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: underline;
+}
